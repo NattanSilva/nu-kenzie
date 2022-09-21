@@ -1,11 +1,21 @@
+.home__container,
+.main__container,
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .home {
   width: 100vw;
   height: 100vh;
 }
 
-.home__container {
+.home__container,
+.main__container {
   width: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.main__container{
+  margin-top: 6rem;
 }
