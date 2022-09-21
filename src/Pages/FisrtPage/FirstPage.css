@@ -2,4 +2,16 @@ section {
   width: 100vw;
   height: 100vh;
   background-color: var(--grey-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 280px;
+  display: flex;
+}
+
+.ilustration {
+  display: none;
 }

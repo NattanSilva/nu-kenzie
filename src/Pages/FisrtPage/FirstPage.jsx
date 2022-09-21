@@ -5,7 +5,10 @@ import "../../styles/colors.css";
 export function FirstPage() {
   return (
     <section>
-      <Slogan  />
+      <div className="container">
+        <img className="ilustration" src="src/Assets/images/illustration.svg" alt="ilustração" />
+        <Slogan />
+      </div>
     </section>
   );
 }
