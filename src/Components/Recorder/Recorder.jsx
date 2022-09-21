@@ -10,7 +10,7 @@ export function Recorder() {
         <div className="value__container">
           <label className="recorder__title">Valor</label>
           <div>
-            <input id="value__input" type="text" inputmode="numeric" placeholder="1"/>
+            <input id="value__input" type="text" inputMode="numeric" placeholder="1"/>
             <p>R$</p>
           </div>
         </div>
