@@ -11,7 +11,7 @@ export function Slogan() {
       />
       <h1 className="slogan__title">Centralize o controle das suas finanças</h1>
       <p className="slogan__headline">de forma rápida e segura</p>
-      <button id="slogan__start__btn">Iniciar</button>
+      <button type="button" id="slogan__start__btn">Iniciar</button>
     </div>
   );
 }

@@ -32,6 +32,12 @@
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--grey-0);
+  transition: .3s ease-in-out;
+}
+
+#slogan__start__btn:hover {
+  background: var(--color-primary-2);
+  color: var(--grey-1);
 }
 
 @media (min-width: 400px) {
