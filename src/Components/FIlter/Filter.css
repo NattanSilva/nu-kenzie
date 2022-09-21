@@ -1,0 +1,41 @@
+.filter__container,
+.filter__titile,
+.filter__btn__container {
+  width: 100%;
+}
+
+.filter__container {
+  min-width: 280px;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.filter__titile {
+  font-size: 1rem;
+  color: var(--grey-4);
+}
+
+.filter__btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn__filter {
+  width: 30%;
+  height: 2rem;
+  background: var(--color-primary);
+  border-radius: var(--btn-border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey-0);
+  transition: .3s ease;
+}
+
+.btn__filter:hover {
+  background-color: var(--color-primary-2);
+  color: var(--grey-1);
+}
