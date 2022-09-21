@@ -1,0 +1,19 @@
+.logo {
+  width: 120px;
+  height: 20px;
+}
+
+.slogan__title,
+.slogan__headline {
+  color: var(--grey-0);
+}
+
+.slogan__title {
+  font-weight: 800;
+}
+
+#slogan__start__btn {
+  background-color: var(--color-primary);
+  color: var(--grey-0);
+  font-weight: 500;
+}
