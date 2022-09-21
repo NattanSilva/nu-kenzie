@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Filter } from "../../Components/FIlter/Filter";
 import { NavBar } from "../../Components/NavBar/NavBar";
 import { Recorder } from "../../Components/Recorder/Recorder";
+import { VoidItem } from "../../Components/VoidItem/VoidItem";
 import "./Home.css";
 
 function Home({ pageReturn }) {
@@ -15,7 +16,7 @@ function Home({ pageReturn }) {
         <section>
           <Filter />
           <ul>
-            
+            <VoidItem />
           </ul>
         </section>
       </main>
