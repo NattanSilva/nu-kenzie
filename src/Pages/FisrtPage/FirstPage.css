@@ -33,3 +33,37 @@ section {
     width: 370px;
   }
 }
+
+@media (min-width: 760px) {
+  .container {
+    width: 720px;
+    align-items: center;
+  }
+
+  .ilustration {
+    display: flex;
+    width: 60%;
+    height: 80vh;
+  }
+
+  .slogan {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 900px;
+    height: 95vh;
+  }
+
+  .ilustration {
+    display: flex;
+    width: 75%;
+    height: 80vh;
+  }
+
+  .slogan {
+    width: 25%;
+  }
+}

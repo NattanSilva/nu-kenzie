@@ -6,8 +6,12 @@ export function FirstPage() {
   return (
     <section>
       <div className="container">
-        <img className="ilustration" src="src/Assets/images/illustration.svg" alt="ilustração" />
-        <Slogan />
+        <Slogan className="slogan" />
+        <img
+          className="ilustration"
+          src="src/Assets/images/illustration.svg"
+          alt="ilustração"
+        />
       </div>
     </section>
   );
