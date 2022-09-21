@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border: 1px solid #E9ECEF;
+  border: 1px solid #e9ecef;
 }
 
 .recorder__title {
@@ -21,6 +21,7 @@ label.recorder__title {
   display: flex;
   align-items: center;
   padding-left: 0.5rem;
+  margin-bottom: 0.4rem;
   background: var(--grey-1);
   border-radius: var(--btn-border-radius);
 }
@@ -72,7 +73,7 @@ label.recorder__title {
 
 #value__input {
   width: 70%;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   font-size: 1rem;
   background: var(--grey-1);
 }
@@ -97,7 +98,6 @@ label.recorder__title {
 #type__input option {
   color: var(--grey-5);
 }
-
 
 #add__value__btn {
   width: 100%;

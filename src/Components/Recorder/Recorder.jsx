@@ -5,7 +5,7 @@ export function Recorder() {
     <form className="recorder__container">
       <label className="recorder__title">Descrição</label>
       <input id="description__input" type="text" placeholder="Digite aqui sua descrição" />
-      <label className="recorder__sugestion">Ex: Compra de roupas</label>
+      <label className="recorder__sugestion">Ex: Compra de roupas...</label>
       <div className="options__container">
         <div className="value__container">
           <label className="recorder__title">Valor</label>
