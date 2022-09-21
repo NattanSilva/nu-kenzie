@@ -28,8 +28,81 @@
   width: 70%;
   height: 2.5rem;
   background-color: var(--color-primary);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--grey-0);
+}
+
+@media (min-width: 400px) {
+  .logo {
+    width: 10rem;
+    height: auto;
+  }
+
+  .slogan__title {
+    font-size: 3rem;
+  }
+
+  .slogan__headline {
+    font-size: 1.5rem;
+  }
+
+  #slogan__start__btn {
+    width: 70%;
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (min-width: 760px) {
+
+  .slogan__container{
+    gap: 1.8rem;
+  }
+
+  .logo {
+    width: 10rem;
+    height: auto;
+  }
+
+  .slogan__title {
+    font-size: 2.7rem;
+  }
+
+  .slogan__headline {
+    font-size: 1.6rem;
+  }
+
+  #slogan__start__btn {
+    width: 70%;
+    height: 3.5rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .slogan__container{
+    gap: 1.5rem;
+  }
+
+  .logo {
+    width: 8rem;
+    height: auto;
+  }
+
+  .slogan__title {
+    font-size: 2.5rem;
+  }
+
+  .slogan__headline {
+    font-size: 1.4rem;
+  }
+
+  #slogan__start__btn {
+    width: 80%;
+    height: 3rem;
+    font-size: 1.7rem;
+  }
 }
