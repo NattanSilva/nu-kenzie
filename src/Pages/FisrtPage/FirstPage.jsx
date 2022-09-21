@@ -1,7 +1,6 @@
 import "./FirstPage.css";
+import "../../styles/colors.css";
 
 export function FirstPage() {
-  return (
-    <h1>Olá, mundo!</h1>
-  )
+  return <section></section>;
 }
