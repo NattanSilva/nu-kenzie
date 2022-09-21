@@ -27,15 +27,27 @@
 .btn__filter {
   width: 30%;
   height: 2rem;
-  background: var(--color-primary);
+  background: var(--grey-2);
   border-radius: var(--btn-border-radius);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--grey-0);
-  transition: .3s ease;
+  transition: .3s ease-in-out;
+  color: var(--grey-3);
 }
 
 .btn__filter:hover {
-  background-color: var(--color-primary-2);
-  color: var(--grey-1);
+  background-color: var(--grey-3);
+  color: var(--grey-2);
 }
+
+.btn__filter.active {
+  background: var(--color-primary);
+  color: var(--grey-0);
+}
+
+.btn__filter.active:hover {
+  background: var(--color-primary);
+  color: var(--grey-0);
+}
+
+
