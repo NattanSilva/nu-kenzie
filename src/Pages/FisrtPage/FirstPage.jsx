@@ -2,11 +2,11 @@ import { Slogan } from "../../Components/Slogan/Slogan";
 import "./FirstPage.css";
 import "../../styles/colors.css";
 
-export function FirstPage() {
+export function FirstPage({setPageName}) {
   return (
     <section>
       <div className="container">
-        <Slogan className="slogan" />
+        <Slogan className="slogan" setPageName={setPageName}/>
         <img
           className="ilustration"
           src="src/Assets/images/illustration.svg"
