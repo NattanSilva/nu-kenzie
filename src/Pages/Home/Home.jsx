@@ -1,11 +1,17 @@
-import { useState } from "react";
+import "./Home.css";
 
-function Home({pageReturn}) {
-  return (
-    <button onClick={() => {
-      pageReturn("firstPage")
-    }}>Voltar</button>
-  )
+function Home({ pageReturn }) {
+  return <h1>Home Page</h1>;
 }
 
 export default Home;
+
+{
+  /* <button
+  onClick={() => {
+    pageReturn("firstPage");
+  }}
+>
+  inicio
+</button> */
+}
