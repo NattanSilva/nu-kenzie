@@ -28,11 +28,11 @@
   width: 70%;
   height: 2.5rem;
   background-color: var(--color-primary);
-  border-radius: 0.5rem;
+  border-radius: var(--btn-border-radius);
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--grey-0);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 #slogan__start__btn:hover {
@@ -61,10 +61,8 @@
   }
 }
 
-
 @media (min-width: 760px) {
-
-  .slogan__container{
+  .slogan__container {
     gap: 1.8rem;
   }
 
@@ -89,7 +87,7 @@
 }
 
 @media (min-width: 1000px) {
-  .slogan__container{
+  .slogan__container {
     gap: 1.5rem;
   }
 

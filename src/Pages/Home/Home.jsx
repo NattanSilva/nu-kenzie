@@ -1,17 +1,12 @@
+import { NavBar } from "../../Components/NavBar/NavBar";
 import "./Home.css";
 
 function Home({ pageReturn }) {
-  return <h1>Home Page</h1>;
+  return (
+    <section className="home">
+      <NavBar page={pageReturn}/>
+    </section>
+  )
 }
 
 export default Home;
-
-{
-  /* <button
-  onClick={() => {
-    pageReturn("firstPage");
-  }}
->
-  inicio
-</button> */
-}
