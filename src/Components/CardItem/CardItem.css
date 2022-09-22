@@ -1,0 +1,66 @@
+.Entrada ,
+.Despesa {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  border-radius: .25rem;
+  padding: .5rem;
+}
+
+.Entrada {
+  border-left: .25rem solid var(--color-secondary);
+}
+
+.Despesa {
+  border-left: .25rem solid var(--grey-2);
+}
+
+.card__titles {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__titles h3 {
+  font-size: 1rem;
+  color: var(--grey-4);
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__footer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__footer div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.item__value {
+  font-size: .8rem;
+  color: var(--grey-4);
+}
+
+#item__remove__btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: scale .3s ease-in-out;
+}
+
+#item__remove__btn svg {
+  width: 100%;
+}
+
+#item__remove__btn:hover {
+  scale: 1.3;
+}
