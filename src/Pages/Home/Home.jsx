@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CardItem } from "../../Components/CardItem/CardItem";
 import { Filter } from "../../Components/FIlter/Filter";
 import { NavBar } from "../../Components/NavBar/NavBar";
@@ -9,6 +9,11 @@ import "./Home.css";
 
 function Home({ pageReturn }) {
   const [dataBase, setDataBase] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+
+  useEffect(() => {
+    setFiltered(dataBase);
+  }, [dataBase]);
 
   return (
     <section className="home">
@@ -17,19 +22,23 @@ function Home({ pageReturn }) {
         <div className="left__container">
           <Recorder setDataBase={setDataBase} />
           <Total
-            totalValue={dataBase
-              .reduce((acm, act) => acm + act.value, 0)
+            totalValue={filtered
+              .reduce((acm, act) => {
+                return act.type === "Despesa"
+                  ? acm - act.value
+                  : acm + act.value;
+              }, 0)
               .toFixed(2)
               .replaceAll(".", ",")}
           />
         </div>
         <section>
-          <Filter />
+          <Filter setFiltered={setFiltered} actualList={dataBase} />
           <ul>
-            {dataBase.length == 0 ? (
+            {filtered.length === 0 ? (
               <VoidItem />
             ) : (
-              dataBase.map((el, index) => {
+              filtered.map((el, index) => {
                 return (
                   <CardItem
                     setDataBase={setDataBase}
