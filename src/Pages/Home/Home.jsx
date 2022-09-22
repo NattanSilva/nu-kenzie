@@ -10,11 +10,18 @@ import "./Home.css";
 function Home({ pageReturn }) {
   const [dataBase, setDataBase] = useState([]);
   const [filtered, setFiltered] = useState([]);
+  const [typeName, setTypeName] = useState("all");
 
   useEffect(() => {
-    setFiltered(dataBase);
+    if(typeName === "all") {
+      setFiltered(dataBase);
+    }else {
+      setFiltered(dataBase.filter(({type}) => {
+        return type === typeName; 
+      }));
+    }
   }, [dataBase]);
-
+  
   return (
     <section className="home">
       <NavBar page={pageReturn} />
@@ -33,7 +40,7 @@ function Home({ pageReturn }) {
           />
         </div>
         <section>
-          <Filter setFiltered={setFiltered} actualList={dataBase} />
+          <Filter setFiltered={setFiltered} dataBase={dataBase} setTypeName={setTypeName} />
           <ul>
             {filtered.length === 0 ? (
               <VoidItem />

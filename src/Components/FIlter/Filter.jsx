@@ -1,16 +1,37 @@
+import { useEffect, useState } from "react";
 import "./Filter.css";
 
-export function Filter({ setFiltered, actualList }) {
+export function Filter({ setFiltered, dataBase, setTypeName }) {
+  const [all, setAll] = useState("btn__filter active");
+  const [entries, setEntries] = useState("btn__filter");
+  const [outputs, setOutputs] = useState("btn__filter");
+  const [input, setInput] = useState([]);
+  const [output, setOutput] = useState([]);
+  // const type = dataBase.filter((el) => el.type);
+  // console.log(type);
+  // useEffect(() => {
+  //   const type = dataBase.filter((el) => el.type);
+  // }, []);
+
   function filterItems(itemType) {
     if (itemType === "all") {
-      setFiltered(actualList);
-      console.log("Entrou no if!");
+      setFiltered(dataBase);
+      setTypeName("all");
+      setAll("btn__filter active");
+      setEntries("btn__filter");
+      setOutputs("btn__filter");
     } else if (itemType === "entries") {
-      setFiltered(actualList.filter(({ type }) => type === "Entrada"));
-      console.log("Entrou no primeiro else if!");
+      setFiltered(dataBase.filter(({ type }) => type === "Entrada"));
+      setTypeName("Entrada");
+      setEntries("btn__filter active");
+      setAll("btn__filter");
+      setOutputs("btn__filter");
     } else if (itemType === "outputs") {
-      setFiltered(actualList.filter(({ type }) => type === "Despesa"));
-      console.log("Entrou no segundo else if!");
+      setFiltered(dataBase.filter(({ type }) => type === "Despesa"));
+      setTypeName("Despesa");
+      setOutputs("btn__filter active");
+      setAll("btn__filter");
+      setEntries("btn__filter");
     }
   }
 
@@ -22,7 +43,7 @@ export function Filter({ setFiltered, actualList }) {
           onClick={(e) => {
             filterItems(e.target.value);
           }}
-          className="btn__filter active"
+          className={all}
           value="all"
         >
           Todos
@@ -31,7 +52,7 @@ export function Filter({ setFiltered, actualList }) {
           onClick={(e) => {
             filterItems(e.target.value);
           }}
-          className="btn__filter"
+          className={entries}
           value="entries"
         >
           Entradas
@@ -40,7 +61,7 @@ export function Filter({ setFiltered, actualList }) {
           onClick={(e) => {
             filterItems(e.target.value);
           }}
-          className="btn__filter"
+          className={outputs}
           value="outputs"
         >
           Saidas
