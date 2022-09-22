@@ -8,18 +8,7 @@ import { VoidItem } from "../../Components/VoidItem/VoidItem";
 import "./Home.css";
 
 function Home({ pageReturn }) {
-  const [dataBase, setDataBase] = useState([
-    {
-      title: "Salário - Mês Dezembro",
-      type: "Entrada",
-      value: 6660.0,
-    },
-    {
-      title: "Compra - Camiseta Preta",
-      type: "Despesa",
-      value: 60.0,
-    },
-  ]);
+  const [dataBase, setDataBase] = useState([]);
 
   return (
     <section className="home">
