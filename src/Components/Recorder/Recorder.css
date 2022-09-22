@@ -156,7 +156,6 @@ label.recorder__title {
 
 @media (min-width: 1000px) {
   .recorder__container {
-    width: 45%;
     padding: 1rem;
   }
 
@@ -195,7 +194,6 @@ label.recorder__title {
 
 @media (min-width: 1100px) {
   .recorder__container {
-    width: 35%;
     padding: 1rem;
   }
 
