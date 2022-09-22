@@ -17,7 +17,10 @@ function Home({ pageReturn }) {
         <div className="left__container">
           <Recorder setDataBase={setDataBase} />
           <Total
-            totalValue={dataBase.reduce((acm, act) => acm + act.value, 0).toFixed(2).replaceAll("." , ",")}
+            totalValue={dataBase
+              .reduce((acm, act) => acm + act.value, 0)
+              .toFixed(2)
+              .replaceAll(".", ",")}
           />
         </div>
         <section>
@@ -29,7 +32,9 @@ function Home({ pageReturn }) {
               dataBase.map((el, index) => {
                 return (
                   <CardItem
+                    setDataBase={setDataBase}
                     key={index}
+                    index={index}
                     title={el.title}
                     type={el.type}
                     value={el.value.toFixed(2).replaceAll(".", ",")}
