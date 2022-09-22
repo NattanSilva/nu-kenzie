@@ -6,7 +6,7 @@ export function Slogan({setPageName}) {
     <div className="slogan__container">
       <img
         className="logo"
-        src="src/Assets/images/Logo.svg"
+        src="./src/Assets/images/Logo.svg"
         alt="Logo Nu Kenzie"
       />
       <h1 className="slogan__title">Centralize o controle das suas finanças</h1>
