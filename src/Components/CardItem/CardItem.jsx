@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./CardItem.css";
 
-export function CardItem({ title, type, value }) {
+export function CardItem({ index, title, type, value, setDataBase }) {
+  function removeItem() {
+    setDataBase((prevState) =>
+      prevState.filter((_, i) => i !== parseInt(index))
+    );
+  }
+
   return (
     <li className={type}>
       <div className="card__titles">
@@ -10,7 +17,12 @@ export function CardItem({ title, type, value }) {
       <div className="card__footer">
         <div>
           <p className="item__value">R$ {value}</p>
-          <button id="item__remove__btn">
+          <button
+            id="item__remove__btn"
+            onClick={() => {
+              removeItem();
+            }}
+          >
             <svg
               width="9"
               height="10"
