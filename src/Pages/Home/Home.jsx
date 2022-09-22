@@ -15,7 +15,7 @@ function Home({ pageReturn }) {
       <NavBar page={pageReturn} />
       <main className="main__container">
         <div className="left__container">
-          <Recorder />
+          <Recorder setDataBase={setDataBase} />
           <Total
             totalValue={dataBase.reduce((acm, act) => acm + act.value, 0).toFixed(2).replaceAll("." , ",")}
           />
