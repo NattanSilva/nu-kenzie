@@ -3,7 +3,7 @@ import "./Recorder.css";
 
 export function Recorder({ setDataBase }) {
   const [title, setTitle] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("Entrada");
   const [value, setValue] = useState(0);
 
   function createItem(event) {

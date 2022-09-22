@@ -5,13 +5,6 @@ export function Filter({ setFiltered, dataBase, setTypeName }) {
   const [all, setAll] = useState("btn__filter active");
   const [entries, setEntries] = useState("btn__filter");
   const [outputs, setOutputs] = useState("btn__filter");
-  const [input, setInput] = useState([]);
-  const [output, setOutput] = useState([]);
-  // const type = dataBase.filter((el) => el.type);
-  // console.log(type);
-  // useEffect(() => {
-  //   const type = dataBase.filter((el) => el.type);
-  // }, []);
 
   function filterItems(itemType) {
     if (itemType === "all") {
@@ -41,7 +34,9 @@ export function Filter({ setFiltered, dataBase, setTypeName }) {
       <div className="filter__btn__container">
         <button
           onClick={(e) => {
-            filterItems(e.target.value);
+            if (dataBase.length !== 0) {
+              filterItems(e.target.value);
+            }
           }}
           className={all}
           value="all"
@@ -50,7 +45,9 @@ export function Filter({ setFiltered, dataBase, setTypeName }) {
         </button>
         <button
           onClick={(e) => {
-            filterItems(e.target.value);
+            if (dataBase.length !== 0) {
+              filterItems(e.target.value);
+            }
           }}
           className={entries}
           value="entries"
@@ -59,7 +56,9 @@ export function Filter({ setFiltered, dataBase, setTypeName }) {
         </button>
         <button
           onClick={(e) => {
-            filterItems(e.target.value);
+            if (dataBase.length !== 0) {
+              filterItems(e.target.value);
+            }
           }}
           className={outputs}
           value="outputs"
